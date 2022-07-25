@@ -1,0 +1,43 @@
+server:
+  port: 8069
+spring:
+  kafka:
+    consumer:
+      group-id: group-1
+      auto-offset-reset: earliest
+      bootstrap-servers: localhost:9092
+  datastax-java-driver:
+    basic.contact-points:
+      - 127.0.0.1:9092
+    basic.load-balancing-policy:
+      local-datacenter: datacenter1
+#  data:
+#    cassandra:
+#      log:
+#        keyspace: log
+#      tracking:
+#        keyspace: tracking
+#      analytics:
+#        keyspace: analytics
+#  messages:
+#    basename: locale/commonTranslations
+#    cache-seconds: -1
+#    encoding: UTF-8
+#    always-use-message-format: true
+#  liquibase:
+#    enabled: false
+  data:
+    cassandra:
+      contact-points: localhost
+      keyspace-name: "signal"
+      port: 9042
+      schema-action: NONE
+      local-datacenter: datacenter1
+  integration:
+    management:
+      default-logging-enabled: true
+  jta:
+    atomikos:
+      properties:
+        enable-logging: true
+#      load-balancing-policy.local-datacenter: datacenter1
