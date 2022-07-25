@@ -61,3 +61,7 @@ These are just a couple of examples, the rest of the endpoints available in the 
 2. Run: `cqlsh`
 3. Run: `use signal` (to use our keyspace)
 4. Run the desired queries!
+
+
+**Note:**
+If an error about slf4j appears, just do: rm -rf.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar
